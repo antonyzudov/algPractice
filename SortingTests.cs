@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using Xunit;
 
 namespace algPractice
@@ -24,7 +22,7 @@ namespace algPractice
                 "200"
             };
 
-            var actual = SortingFunctions.bigSorting(inputArray.ToArray());
+            var actual = BigSorting.bigSorting(inputArray.ToArray());
 
             var expected = new List<string>
             {
@@ -47,7 +45,7 @@ namespace algPractice
         {
             var inputArr = new List<int> {2, 4, 6, 8, 3};
 
-            var actual = SortingFunctions.InsertionSort1(inputArr.ToArray());
+            var actual = InsertionSort1.Sort(inputArr.ToArray());
 
             var expected = new List<string>
             {

@@ -1,0 +1,14 @@
+C:\yandex\algPractice\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\yandex\algPractice\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\yandex\algPractice\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\yandex\algPractice\bin\Debug\netcoreapp2.0\algPractice.deps.json
+C:\yandex\algPractice\bin\Debug\netcoreapp2.0\algPractice.runtimeconfig.json
+C:\yandex\algPractice\bin\Debug\netcoreapp2.0\algPractice.runtimeconfig.dev.json
+C:\yandex\algPractice\bin\Debug\netcoreapp2.0\algPractice.dll
+C:\yandex\algPractice\bin\Debug\netcoreapp2.0\algPractice.pdb
+C:\yandex\algPractice\obj\Debug\netcoreapp2.0\algPractice.csprojAssemblyReference.cache
+C:\yandex\algPractice\obj\Debug\netcoreapp2.0\algPractice.csproj.CoreCompileInputs.cache
+C:\yandex\algPractice\obj\Debug\netcoreapp2.0\algPractice.AssemblyInfoInputs.cache
+C:\yandex\algPractice\obj\Debug\netcoreapp2.0\algPractice.AssemblyInfo.cs
+C:\yandex\algPractice\obj\Debug\netcoreapp2.0\algPractice.dll
+C:\yandex\algPractice\obj\Debug\netcoreapp2.0\algPractice.pdb

@@ -40,5 +40,24 @@ namespace algPractice
 
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        [Description("https://www.hackerrank.com/challenges/insertionsort1/problem")]
+        public void insertionSort1_Test()
+        {
+            var inputArr = new List<int> {2, 4, 6, 8, 3};
+
+            var actual = SortingFunctions.InsertionSort1(inputArr.ToArray());
+
+            var expected = new List<string>
+            {
+                "2 4 6 8 8",
+                "2 4 6 6 8",
+                "2 4 4 6 8",
+                "2 3 4 6 8"
+            };
+ 
+            Assert.Equal(expected, actual);
+        }
     }
 }

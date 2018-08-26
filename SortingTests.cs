@@ -57,5 +57,45 @@ namespace algPractice
  
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        [Description("https://www.hackerrank.com/challenges/insertionsort2/problem")]
+        public void insertionSort2_Test()
+        {
+            var arr = new List<int> {3, 4, 7, 5, 6, 2, 1};
+
+            var actual = InsertionSort2.Sort(arr.ToArray());
+
+            var expected = new List<string>
+            {
+                "3 4 7 5 6 2 1",
+                "3 4 7 5 6 2 1",
+                "3 4 5 7 6 2 1",
+                "3 4 5 6 7 2 1",
+                "2 3 4 5 6 7 1",
+                "1 2 3 4 5 6 7"
+            };
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void insertionSort2_Test2()
+        {
+            var arr = new List<int> { 1, 4, 3, 5, 6, 2 };
+
+            var actual = InsertionSort2.Sort(arr.ToArray());
+
+            var expected = new List<string>
+            {
+                "1 4 3 5 6 2",
+                "1 3 4 5 6 2",
+                "1 3 4 5 6 2",
+                "1 3 4 5 6 2",
+                "1 2 3 4 5 6"
+            };
+
+            Assert.Equal(expected, actual);
+        }
     }
 }

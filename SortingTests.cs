@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
+using Business;
 using Xunit;
 
 namespace algPractice
@@ -96,6 +97,17 @@ namespace algPractice
             };
 
             Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        [Description("https://www.hackerrank.com/challenges/runningtime/problem")]
+        public void runningTime_Test()
+        {
+            var arr = new List<int> {2, 1, 3, 1, 2,};
+
+            var actual = RunningTime.Calculate(arr.ToArray());
+
+            Assert.Equal(4, actual);
         }
     }
 }

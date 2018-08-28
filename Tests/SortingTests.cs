@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Business;
 using Xunit;
 
-namespace algPractice
+namespace Tests
 {
     public class SortingTests
     {
@@ -108,6 +108,17 @@ namespace algPractice
             var actual = RunningTime.Calculate(arr.ToArray());
 
             Assert.Equal(4, actual);
+        }
+
+        [Fact]
+        [Description("https://www.hackerrank.com/challenges/quicksort1/problem")]
+        public void quickSort_Test()
+        {
+            var arr = new List<int> {4, 5, 3, 7, 2};
+
+            var actual = QuickSort.GetLeftPivotRight(arr);
+
+            Assert.Equal(new List<int>{ 3, 2, 4, 5, 7, }, actual);
         }
     }
 }

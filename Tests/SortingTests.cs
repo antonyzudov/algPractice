@@ -109,5 +109,16 @@ namespace Tests
 
             Assert.Equal(4, actual);
         }
+
+        [Fact]
+        [Description("https://www.hackerrank.com/challenges/find-the-median/problem")]
+        public void FindMedian_Test()
+        {
+            var arr = new int[] {0, 1, 2, 4, 6, 5, 3,};
+
+            var actual = FindMedian.GetMedian(arr);
+
+            Assert.Equal(3, actual);
+        }
     }
 }

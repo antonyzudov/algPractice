@@ -19,7 +19,7 @@ namespace Business
                 arr[i][1] = "-";
             }
 
-            const int k = 10;
+            const int k = 100;
 
             var b = new List<List<string>>();
             foreach (var ai in arr)

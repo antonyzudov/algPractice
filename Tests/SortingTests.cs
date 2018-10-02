@@ -153,5 +153,27 @@ namespace Tests
 
             Assert.Equal("- - - - - to be or not to be - that is the question - - - -", actual);
         }
+
+        [Fact]
+        [Description("https://www.hackerrank.com/challenges/insertion-sort/problem")]
+        public void insertionSort_Test1()
+        {
+            var arr = new[] {2, 1, 3, 1, 2};
+
+            var actual = insertionSort.CountShifts(arr);
+
+            Assert.Equal(4, actual);
+        }
+
+        [Fact]
+        [Description("https://www.hackerrank.com/challenges/insertion-sort/problem")]
+        public void insertionSort_Test2()
+        {
+            var arr = new[] { 12, 15, 1, 5, 6, 14, 11 };
+
+            var actual = insertionSort.CountShifts(arr);
+
+            Assert.Equal(10, actual);
+        }
     }
 }

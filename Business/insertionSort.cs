@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 
 namespace Business
 {
     [Description("https://www.hackerrank.com/challenges/insertion-sort/problem")]
     public static class insertionSort
     {
-        public static int CountShifts(int[] arr)
+        public static long CountShifts(int[] mas)
         {
-            var list = arr.ToList();
+            var list = mas.ToList();
             return MergeSort(list, 0, list.Count - 1);
         }
 
-        private static int MergeSort(IList<int> list, int left, int right)
+        private static long MergeSort(IList<int> list, int left, int right)
         {
             if (left >= right)
             {
@@ -27,19 +25,21 @@ namespace Business
             var leftShifts = MergeSort(list, left, middle);
             var rightShifts = MergeSort(list, middle + 1, right);
 
-            return Merge(list, left, middle, right)
-                + leftShifts
-                + rightShifts;
+            var mergeShifts = Merge(list, left, middle + 1, right);
+
+            return leftShifts + rightShifts + mergeShifts;
         }
 
-        private static int Merge(IList<int> list, int left, int middle, int right)
+        private static long Merge(IList<int> list, int left, int middle, int right)
         {
-            var i = left;
-            var j = middle + 1;
-            var result = 0;
-            var temp = new List<int>();
+            long result = 0;
 
-            while (i <= middle && j <= right)
+            var i = left;
+            var j = middle;
+
+            var temp = new List<int>();
+            
+            while (i < middle && j <= right)
             {
                 if (list[i] <= list[j])
                 {
@@ -49,26 +49,28 @@ namespace Business
                 else
                 {
                     temp.Add(list[j]);
-
-                    result += middle + 1 - i;
-
                     j++;
+                    result += middle - i;
                 }
             }
 
-            for (; i <= middle; i++)
+            while (i < middle)
             {
                 temp.Add(list[i]);
+                i++;
             }
-
-            for (; j <= right; j++)
+            while (j <= right)
             {
                 temp.Add(list[j]);
+                j++;
             }
 
-            for (var k = 0; left <= right; left++, k++)
+            var k = 0;
+            while (left <= right)
             {
                 list[left] = temp[k];
+                left++;
+                k++;
             }
 
             return result;

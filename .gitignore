@@ -250,3 +250,7 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+.vs/algPractice/v15/.suo
+.vs/algPractice/v15/Server/sqlite3/storage.ide
+.vs/algPractice/v15/Server/sqlite3/storage.ide-shm
+.vs/algPractice/v15/Server/sqlite3/storage.ide-wal

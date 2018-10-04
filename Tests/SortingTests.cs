@@ -44,7 +44,7 @@ namespace Tests
         [Description("https://www.hackerrank.com/challenges/insertionsort1/problem")]
         public void insertionSort1_Test()
         {
-            var inputArr = new List<int> {2, 4, 6, 8, 3};
+            var inputArr = new List<int> { 2, 4, 6, 8, 3 };
 
             var actual = InsertionSort1.Sort(inputArr.ToArray());
 
@@ -55,7 +55,7 @@ namespace Tests
                 "2 4 4 6 8",
                 "2 3 4 6 8"
             };
- 
+
             Assert.Equal(expected, actual);
         }
 
@@ -63,7 +63,7 @@ namespace Tests
         [Description("https://www.hackerrank.com/challenges/insertionsort2/problem")]
         public void insertionSort2_Test()
         {
-            var arr = new List<int> {3, 4, 7, 5, 6, 2, 1};
+            var arr = new List<int> { 3, 4, 7, 5, 6, 2, 1 };
 
             var actual = InsertionSort2.Sort(arr.ToArray());
 
@@ -103,7 +103,7 @@ namespace Tests
         [Description("https://www.hackerrank.com/challenges/runningtime/problem")]
         public void runningTime_Test()
         {
-            var arr = new List<int> {2, 1, 3, 1, 2,};
+            var arr = new List<int> { 2, 1, 3, 1, 2, };
 
             var actual = RunningTime.Calculate(arr.ToArray());
 
@@ -114,7 +114,7 @@ namespace Tests
         [Description("https://www.hackerrank.com/challenges/find-the-median/problem")]
         public void FindMedian_Test()
         {
-            var arr = new int[] {0, 1, 2, 4, 6, 5, 3,};
+            var arr = new int[] { 0, 1, 2, 4, 6, 5, 3, };
 
             var actual = FindMedian.GetMedian(arr);
 
@@ -158,7 +158,7 @@ namespace Tests
         [Description("https://www.hackerrank.com/challenges/insertion-sort/problem")]
         public void insertionSort_Test1()
         {
-            var arr = new[] {2, 1, 3, 1, 2};
+            var arr = new[] { 2, 1, 3, 1, 2 };
 
             var actual = insertionSort.CountShifts(arr);
 
@@ -175,5 +175,18 @@ namespace Tests
 
             Assert.Equal(10, actual);
         }
+
+        [Fact]
+        [Description("https://www.hackerrank.com/challenges/fraudulent-activity-notifications/problem")]
+        public void activityNotifications_Test()
+        {
+            var expenditure = new int[] { 2, 3, 4, 2, 3, 6, 8, 4, 5 };
+            var d = 5;
+
+            var actual = SlidingWindowMedian.activityNotifications(expenditure, d);
+
+            Assert.Equal(2, actual);
+        }
+
     }
 }

@@ -188,5 +188,16 @@ namespace Tests
             Assert.Equal(2, actual);
         }
 
+        [Fact]
+        [Description("https://www.hackerrank.com/challenges/lilys-homework/problem")]
+        public void lilysHomework_Test()
+        {
+            var arr = new int[] { 2, 5, 3, 1 };
+
+            var actual = SwapCounting.lilysHomework(arr);
+
+            Assert.Equal(2, actual);
+        }
+
     }
 }

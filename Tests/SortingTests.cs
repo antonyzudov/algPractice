@@ -1,6 +1,9 @@
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using Business;
+using Utils;
 using Xunit;
 
 namespace Tests
@@ -199,5 +202,22 @@ namespace Tests
             Assert.Equal(2, actual);
         }
 
+        [Fact]
+        [Description("Тест на сортировку слиянием")]
+        public void MergeSorting_Test()
+        {
+            var rand = new Random();
+
+            var list = Enumerable
+                .Range(1, 10000)
+                .Select(x => rand.Next())
+                .ToList();
+
+            var actual = MergeSorting.Sort(list);
+
+            list.Sort();
+
+            Assert.Equal(list, actual);
+        }
     }
 }

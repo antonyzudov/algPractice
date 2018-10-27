@@ -37,25 +37,19 @@ namespace Utils
                 leftList.Add(list[i]);
             }
 
-            var rightList = new List<int>();
-            for (j = middle + 1; j <= toIndex; j++)
-            {
-                rightList.Add(list[j]);
-            }
-
             i = 0;
-            j = 0;
+            j = middle + 1;
             var k = fromIndex;
-            for (; i < leftList.Count && j < rightList.Count; k++)
+            for (; i < leftList.Count && j <= toIndex; k++)
             {
-                if (leftList[i] <= rightList[j])
+                if (leftList[i] <= list[j])
                 {
                     list[k] = leftList[i];
                     i++;
                 }
                 else
                 {
-                    list[k] = rightList[j];
+                    list[k] = list[j];
                     j++;
                 }
             }
@@ -63,12 +57,6 @@ namespace Utils
             for (; i < leftList.Count; i++)
             {
                 list[k] = leftList[i];
-                k++;
-            }
-
-            for (; j < rightList.Count; j++)
-            {
-                list[k] = rightList[j];
                 k++;
             }
         }

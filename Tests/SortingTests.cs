@@ -219,5 +219,23 @@ namespace Tests
 
             Assert.Equal(list, actual);
         }
+
+        [Fact]
+        [Description("Тест на сортировку выбором")]
+        public void SelectionSorting_Test()
+        {
+            var rand = new Random();
+
+            var list = Enumerable
+                .Range(1, 5)
+                .Select(x => rand.Next())
+                .ToList();
+
+            var actual = SelectionSorting.Sort(list);
+
+            list.Sort();
+
+            Assert.Equal(list, actual);
+        }
     }
 }

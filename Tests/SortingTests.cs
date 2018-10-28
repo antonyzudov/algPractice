@@ -239,7 +239,7 @@ namespace Tests
         }
 
         [Fact]
-        [Description("Тест на сортировку вытавками")]
+        [Description("Тест на сортировку вставками")]
         public void InsertionSorting_Test()
         {
             var rand = new Random();
@@ -250,6 +250,24 @@ namespace Tests
                 .ToList();
 
             var actual = InsertionSorting.Sort(list);
+
+            list.Sort();
+
+            Assert.Equal(list, actual);
+        }
+
+        [Fact]
+        [Description("Тест на пузырьковую сортировку")]
+        public void BubbleSorting_Test()
+        {
+            var rand = new Random();
+
+            var list = Enumerable
+                .Range(1, 10000)
+                .Select(x => rand.Next())
+                .ToList();
+
+            var actual = BubbleSorting.Sort(list);
 
             list.Sort();
 

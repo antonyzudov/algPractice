@@ -347,5 +347,23 @@ namespace Tests
 
             Assert.Equal(list, actual);
         }
+
+        [Fact]
+        [Description("Тест на пирамидальную сортировку")]
+        public void HeapSorting_Test()
+        {
+            var rand = new Random();
+
+            var list = Enumerable
+                .Range(1, 10000)
+                .Select(x => rand.Next())
+                .ToList();
+
+            var actual = HeapSorting.Sort(list);
+
+            list.Sort();
+
+            Assert.Equal(list, actual);
+        }
     }
 }

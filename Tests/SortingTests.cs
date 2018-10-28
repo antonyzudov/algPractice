@@ -273,5 +273,25 @@ namespace Tests
 
             Assert.Equal(list, actual);
         }
+
+        [Fact]
+        [Description("Тест на сортировку подсчётом")]
+        public void CountingSorting_Test()
+        {
+            var rand = new Random();
+
+            var maxValue = 200;
+
+            var list = Enumerable
+                .Range(1, 10000)
+                .Select(x => rand.Next(maxValue))
+                .ToList();
+
+            var actual = CountingSorting.Sort(list, maxValue);
+
+            list.Sort();
+
+            Assert.Equal(list, actual);
+        }
     }
 }

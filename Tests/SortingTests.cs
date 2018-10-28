@@ -227,11 +227,29 @@ namespace Tests
             var rand = new Random();
 
             var list = Enumerable
-                .Range(1, 5)
+                .Range(1, 10000)
                 .Select(x => rand.Next())
                 .ToList();
 
             var actual = SelectionSorting.Sort(list);
+
+            list.Sort();
+
+            Assert.Equal(list, actual);
+        }
+
+        [Fact]
+        [Description("Тест на сортировку вытавками")]
+        public void InsertionSorting_Test()
+        {
+            var rand = new Random();
+
+            var list = Enumerable
+                .Range(1, 10000)
+                .Select(x => rand.Next())
+                .ToList();
+
+            var actual = InsertionSorting.Sort(list);
 
             list.Sort();
 

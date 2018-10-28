@@ -293,5 +293,41 @@ namespace Tests
 
             Assert.Equal(list, actual);
         }
+
+        [Fact]
+        [Description("Тест на сортировку Хоара с разбиением Ломуто")]
+        public void QuickSortingLomuto_Test()
+        {
+            var rand = new Random();
+
+            var list = Enumerable
+                .Range(1, 10000)
+                .Select(x => rand.Next())
+                .ToList();
+
+            var actual = QuickSorting.Sort(list, PartitionType.Lomuto);
+
+            list.Sort();
+
+            Assert.Equal(list, actual);
+        }
+
+        [Fact]
+        [Description("Тест на сортировку Хоара с разбиением Хоара")]
+        public void QuickSortingHoar_Test()
+        {
+            var rand = new Random();
+
+            var list = Enumerable
+                .Range(1, 10000)
+                .Select(x => rand.Next())
+                .ToList();
+
+            var actual = QuickSorting.Sort(list, PartitionType.Hoar);
+
+            list.Sort();
+
+            Assert.Equal(list, actual);
+        }
     }
 }
